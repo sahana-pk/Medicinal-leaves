@@ -19,6 +19,8 @@ class MedicineItem:
     instructions: Optional[str] = None       # e.g., "After food", "Before breakfast", "Apply locally"
     confidence: float = 0.0                  # Confidence score (0.0 to 1.0)
     matched_generic: Optional[str] = None    # Standard generic pharmacological name
+    usage: Optional[str] = None              # Common medical uses
+    side_effects: Optional[str] = None       # Known side effects
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
